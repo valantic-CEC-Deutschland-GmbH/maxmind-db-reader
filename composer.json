@@ -1,0 +1,63 @@
+{
+  "name": "valantic-spryker/maxmind-db",
+  "type": "library",
+  "description": "MaxMind GeoIP2 DB Reader Spryker implementation",
+  "homepage": "https://www.valantic.com",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.3",
+    "geoip2/geoip2": "~2.0",
+    "spryker/kernel": "^3.56.0",
+    "spryker/log": "^3.7.0",
+    "spryker/symfony": "^3.5.0",
+    "spryker/transfer": "^3.25.0"
+  },
+  "require-dev": {
+    "codeception/module-asserts": "^1.3.0",
+    "codeception/stub": "^3.6.1",
+    "phpstan/phpstan": "^1.0.0",
+    "spryker/code-sniffer": "^0.17.1",
+    "spryker/testify": "^3.40.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ValanticSpryker\\": "src/ValanticSpryker/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ValanticSprykerTest\\": "tests/ValanticSprykerTest/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/codecept run",
+    "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml --ignore=/tests/app/ src/ tests/",
+    "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml --ignore=/tests/app/ src/ tests/",
+    "stan": "phpstan analyse",
+    "stan-setup": "cp composer.json composer.backup && composer require --dev phpstan/phpstan:^1.0.0 && mv composer.backup composer.json",
+    "lowest": "validate-prefer-lowest",
+    "lowest-setup": "composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction && cp composer.json composer.backup && composer require --dev dereuromark/composer-prefer-lowest && mv composer.backup composer.json"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "authors": [
+    {
+      "name": "Valantic",
+      "homepage": "https://www.valantic.com"
+    }
+  ],
+  "keywords": [
+    "geoip2",
+    "geolocation",
+    "maxmind db"
+  ],
+  "include-path": [
+    "src/"
+  ]
+}
