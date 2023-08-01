@@ -8,7 +8,7 @@ A client layer abstraction to use MaxMind GeoIP2 DB Reader.  Refer to https://ww
 
 ### Install package
 ```
-composer req valantic-cec/maxmind-db
+composer req valantic-spryker-eco/maxmind-db
 ```
 
 ### Update your shared config
