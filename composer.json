@@ -1,5 +1,5 @@
 {
-  "name": "valantic-cec/maxmind-db",
+  "name": "valantic-spryker-eco/maxmind-db",
   "type": "library",
   "description": "MaxMind GeoIP2 DB Reader Spryker implementation",
   "homepage": "https://www.valantic.com",
