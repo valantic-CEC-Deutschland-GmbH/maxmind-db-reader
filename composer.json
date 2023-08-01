@@ -1,9 +1,9 @@
 {
-  "name": "valantic-spryker/maxmind-db",
+  "name": "valantic-cec/maxmind-db",
   "type": "library",
   "description": "MaxMind GeoIP2 DB Reader Spryker implementation",
   "homepage": "https://www.valantic.com",
-  "license": "MIT",
+  "license": "proprietary",
   "require": {
     "php": ">=7.3",
     "geoip2/geoip2": "~2.0",
